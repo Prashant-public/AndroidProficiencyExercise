@@ -40,7 +40,10 @@ class MainActivity : AppCompatActivity() {
         viewModel.canada.observe(this, Observer { canada ->
             canada?.let {
                 canadaList.visibility = View.VISIBLE
-                canadaListAdapter.updateCanadaData(it.aboutCanadaArray)
+
+                val aboutCanadaListReplica = it.aboutCanadaArray.filter { it.title != null }
+
+                canadaListAdapter.updateCanadaData(aboutCanadaListReplica)
                 supportActionBar?.setTitle(it.title)
             }
         })
