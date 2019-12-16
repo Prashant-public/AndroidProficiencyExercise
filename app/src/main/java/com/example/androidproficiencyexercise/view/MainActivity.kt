@@ -41,9 +41,9 @@ class MainActivity : AppCompatActivity() {
             canada?.let {
                 canadaList.visibility = View.VISIBLE
 
-                val aboutCanadaListReplica = it.aboutCanadaArray.filter { it.title != null }
+                val filteredAboutCanadaList = it.aboutCanadaArray.filter { it.title != null }
 
-                canadaListAdapter.updateCanadaData(aboutCanadaListReplica)
+                canadaListAdapter.updateCanadaData(filteredAboutCanadaList)
                 supportActionBar?.setTitle(it.title)
             }
         })
