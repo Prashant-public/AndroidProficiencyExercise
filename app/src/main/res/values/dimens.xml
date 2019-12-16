@@ -7,4 +7,7 @@
     <dimen name="margin_15dp">15dp</dimen>
     <dimen name="margin_5dp">5dp</dimen>
     <dimen name="size_96dp">96dp</dimen>
+    <dimen name="margin_0dp">0dp</dimen>
+    <dimen name="margin_8dp">8dp</dimen>
+    <dimen name="margin_100dp">100dp</dimen>
 </resources>

@@ -10,7 +10,7 @@ import com.example.androidproficiencyexercise.util.getProgressDrawable
 import com.example.androidproficiencyexercise.util.loadImage
 import kotlinx.android.synthetic.main.item_canada.view.*
 
-class CanadaListAdapter (var results: ArrayList<AboutCanada>) :
+class CanadaListAdapter(var results: ArrayList<AboutCanada>) :
     RecyclerView.Adapter<CanadaListAdapter.CanadaViewHolder>() {
 
     fun updateCanadaData(newResults: List<AboutCanada>) {
