@@ -1,5 +1,6 @@
 package com.example.androidproficiencyexercise.viewmodel
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.androidproficiencyexercise.di.DaggerApiComponent
@@ -25,6 +26,11 @@ class ListViewModel : ViewModel() {
     val canada = MutableLiveData<Canada>()
     val canadaLoadError = MutableLiveData<Boolean>()
     val loading = MutableLiveData<Boolean>()
+
+    // Encapsulate access to mutable LiveData through getter
+    fun getCanada(): LiveData<Canada> = canada
+    fun getCanadaLoadError(): LiveData<Boolean> = canadaLoadError
+    fun getLoading(): LiveData<Boolean> = loading
 
     fun refresh() {
         fetchCanadaData()

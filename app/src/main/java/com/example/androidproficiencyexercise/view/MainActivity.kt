@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun observeViewModel() {
 
-        viewModel.canada.observe(this, Observer { canada ->
+        viewModel.getCanada().observe(this, Observer { canada ->
             canada?.let {
                 canadaList.visibility = View.VISIBLE
 
@@ -48,13 +48,13 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        viewModel.canadaLoadError.observe(this, Observer { isError ->
+        viewModel.getCanadaLoadError().observe(this, Observer { isError ->
             isError?.let {
                 list_error.visibility = if (it) View.VISIBLE else View.GONE
             }
         })
 
-        viewModel.loading.observe(this, Observer { isLoading ->
+        viewModel.getLoading().observe(this, Observer { isLoading ->
             isLoading?.let {
                 loading_view.visibility = if (it) View.VISIBLE else View.GONE
                 if (it) {
